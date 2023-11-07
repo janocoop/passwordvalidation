@@ -42,4 +42,20 @@ public class passwordvalidation {
         }
         return true;
     }
+
+    public static boolean checkUnsave(String password) {
+        String[] badPassword = new String[3];
+        badPassword[0] = "ABCDEFGH";
+        badPassword[1] = "abcdefgh";
+        badPassword[2] = "12345678";
+
+        for (int a = 0; a < badPassword.length; a++) {
+            if (password.equals(badPassword[a])) {
+                return false;
+            }
+
+        }
+      return true;
+    }
+
 }

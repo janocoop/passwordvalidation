@@ -28,6 +28,7 @@ public class passwordvalidationTest {
         assertEquals(false, actual);
 
     }
+
     @Test
     public void passwordNumberCheck() {
         //given
@@ -40,6 +41,7 @@ public class passwordvalidationTest {
         //then
         assertEquals(true, result);
     }
+
     @Test
     public void passwordNumberCheckfalse() {
         //given
@@ -53,19 +55,19 @@ public class passwordvalidationTest {
         assertEquals(false, result);
 
 
-
     }
-@Test
+
+    @Test
     public void passwordcheckcase() {
 
-    //give
-    String password = "TESTtest";
+        //give
+        String password = "TESTtest";
 
-    //when
-    boolean result = passwordvalidation.checkcase(password);
+        //when
+        boolean result = passwordvalidation.checkcase(password);
 
-    //then
-    assertEquals(true, result);
+        //then
+        assertEquals(true, result);
 
 
     }
@@ -84,6 +86,7 @@ public class passwordvalidationTest {
 
 
     }
+
     @Test
     public void passwordcheckcaseuppercase() {
 
@@ -99,6 +102,30 @@ public class passwordvalidationTest {
 
     }
 
+    @Test
+    public void passwordcheckunsave() {
+        //given
+        String password = "12345678";
+
+        //when
+        boolean result = passwordvalidation.checkUnsave(password);
+
+        //then
+        assertEquals(false, result);
+
+    }
+    @Test
+    public void passwordcheckunsavetrue() {
+        //given
+        String password = "qqweere3";
+
+        //when
+        boolean result = passwordvalidation.checkUnsave(password);
+
+        //then
+        assertEquals(true, result);
+
+    }
 
 }
 
