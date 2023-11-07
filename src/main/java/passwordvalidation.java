@@ -27,8 +27,19 @@ public class passwordvalidation {
             }
 
         }
-            return false;
+        return false;
 
     }
 
+    public static boolean checkcase(String password) {
+        String lowerCasePassword = password.toLowerCase();
+        if (lowerCasePassword.equals(password)) {
+            return false;
+        }
+        String upperCasePassword = password.toUpperCase();
+        if (upperCasePassword.equals(password)) {
+            return false;
+        }
+        return true;
+    }
 }

@@ -52,5 +52,53 @@ public class passwordvalidationTest {
         //then
         assertEquals(false, result);
 
-}}
+
+
+    }
+@Test
+    public void passwordcheckcase() {
+
+    //give
+    String password = "TESTtest";
+
+    //when
+    boolean result = passwordvalidation.checkcase(password);
+
+    //then
+    assertEquals(true, result);
+
+
+    }
+
+    @Test
+    public void passwordcheckcasefalse() {
+
+        //give
+        String password = "testtest";
+
+        //when
+        boolean result = passwordvalidation.checkcase(password);
+
+        //then
+        assertEquals(false, result);
+
+
+    }
+    @Test
+    public void passwordcheckcaseuppercase() {
+
+        //give
+        String password = "TESTTEST";
+
+        //when
+        boolean result = passwordvalidation.checkcase(password);
+
+        //then
+        assertEquals(false, result);
+
+
+    }
+
+
+}
 
