@@ -11,12 +11,24 @@ public class passwordvalidation {
     }
 
     public static boolean checklenght(String password) {
-        if (password.length()>= 8) {
+        if (password.length() >= 8) {
             return true;
-        }
-        else {
+        } else {
             return false;
         }
+    }
+
+    public static boolean checkNumber(String password) {
+        char[] passwordcharacters = password.toCharArray();
+        for (int i = 0; i < password.length(); i++) {
+
+            if (Character.isDigit(passwordcharacters[i])) {
+                return true;
+            }
+
+        }
+            return false;
 
     }
+
 }

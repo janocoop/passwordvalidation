@@ -28,5 +28,29 @@ public class passwordvalidationTest {
         assertEquals(false, actual);
 
     }
-}
+    @Test
+    public void passwordNumberCheck() {
+        //given
+        String password = "12345678";
+
+        //when
+        boolean result = passwordvalidation.checkNumber(password);
+
+
+        //then
+        assertEquals(true, result);
+    }
+    @Test
+    public void passwordNumberCheckfalse() {
+        //given
+        String password = "testtest";
+
+        //when
+        boolean result = passwordvalidation.checkNumber(password);
+
+
+        //then
+        assertEquals(false, result);
+
+}}
 
